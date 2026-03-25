@@ -1,0 +1,249 @@
+/* ===================================================================
+   PALETA DE COLORES Y VARIABLES GLOBALES (ROSA SUAVE)
+   =================================================================== */
+:root {
+    --color-fondo-suave: #FFEDF1;  /* Rosa muy pálido, casi blanco */
+    --color-principal: #FFB6C1;   /* Rosa claro para hover y acentos */
+    --color-secundario: #B37F9C;  /* Rosa malva para títulos y botones fuertes */
+    --color-texto-oscuro: #333333;
+    --color-texto-claro: #4c4c4c;
+    --color-borde-suave: #E0E0E0;
+    --color-error: #cc0000;
+}
+
+/* ===================================================================
+   ESTILOS BASE
+   =================================================================== */
+body {
+    background-color: var(--color-fondo-suave);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto-oscuro);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura */
+}
+
+/* ===================================================================
+   ESTILOS DE CONTENEDORES PRINCIPALES (BLOG, MOOVIES)
+   =================================================================== */
+.blog, .pelis, .items, .buttons {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    border-left: 5px solid var(--color-principal);
+
+}
+
+/* ===================================================================
+   ESTILOS DE AUTENTICACIÓN (LOGIN, REGISTER, INDEX)
+   =================================================================== */
+.auth-container {
+    /* Contenedor central en forma de tarjeta */
+    width: 90%;
+    max-width: 400px;
+    margin: 80px auto 0 auto; /* Centrar y dar margen superior */
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: var(--color-secundario);
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+/* Estilo para etiquetas y campos de entrada */
+.auth-container label {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-texto-oscuro);
+}
+
+.auth-container input[type="text"],
+.auth-container input[type="password"],
+.auth-container input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.auth-container input:focus {
+    border-color: var(--color-principal);
+    outline: none;
+}
+
+/* Botón de Submit dentro del formulario */
+.submit-btn {
+    width: 100%;
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #8c5a76;
+}
+
+/* Enlaces de texto como "Inicia sesión aquí" */
+.small-text a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+
+/* ===================================================================
+   ESTILOS DE BOTONES (GENERALES)
+   =================================================================== */
+
+.buttons, .navigation-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    /* Para moovies, los botones son columna */
+}
+.navigation-buttons {
+    height: fit-content;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    float: center;
+
+
+}
+
+
+.btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--color-principal);
+    color: var(--color-texto-oscuro);
+    background-color: #ffffff;
+    float: center;
+
+}
+
+.btn:hover {
+    background-color: var(--color-principal);
+    color: white;
+    border-color: var(--color-secundario);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el botón Borrar */
+.delete-btn {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    float: center;
+}
+
+.delete-btn:hover {
+    background-color: var(--color-secundario);
+}
+
+
+/* ===================================================================
+   ESTILOS DE POSTS Y CONTENIDO (BLOG y MOOVIES)
+   =================================================================== */
+
+.post, .items, .buttons {
+    background-color: white;
+    padding: 25px; /* Esto da espacio dentro de la tarjeta */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    border-left: 5px solid var(--color-principal); /* El borde rosa lateral */
+
+}
+
+.post h2, .items h2 {
+    color: var(--color-secundario);
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+.post p, .items p {
+    color: var(--color-texto-claro);
+    line-height: 1.6;
+}
+
+.author-info {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* Mensajes de advertencia/error (login, register) */
+.advertencia {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #ffe6e6;
+    color: var(--color-error);
+    border: 1px solid #ff9999;
+}
+
+
+/* Estilos para las imágenes */
+.blog img, .pelis img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.login-card {
+    /* Propiedades de Tarjeta */
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 400px; /* Definir un ancho fijo para la tarjeta */
+    margin: 50px auto; /* Centrar la tarjeta en la página */
+
+    /* Aseguramos que los elementos internos se apilen verticalmente (comportamiento por defecto) */
+    display: block;
+}
+
+/* Estilo visual para cada comentario individual */
+.comment-item {
+    border-left: 3px solid var(--color-principal); /* Borde lateral rosa para diferenciar */
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background-color: var(--color-fondo-suave); /* Fondo suave (Rosa muy pálido) */
+    border-radius: 0 5px 5px 0; /* Bordes redondeados solo a la derecha */
+
+}

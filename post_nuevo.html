@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crea tu propio post</title>
+  <link rel="stylesheet" href = '/static/estilo_post.css'>
+</head>
+
+<body>
+<div class="auth-container">
+        <h2>Nueva Publicación</h2>
+
+<form method="POST" action="{{ url_for('add') }}">
+    <div class="formulario">
+
+        <label for="title">Título de la Publicación:</label>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="content">Contenido del Post:</label>
+        <textarea id="content" name="content" rows="15" required></textarea><br>
+
+        <button type="submit" class="btn">Publicar</button>
+    </div>
+</form>
+
+</form>
+</div>
+
+</body>
+</html>

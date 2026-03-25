@@ -1,0 +1,140 @@
+/* ===================================================================
+   PALETA DE COLORES Y VARIABLES LOCALES (ROSA SUAVE)
+   =================================================================== */
+:root {
+    --color-fondo-suave: #FFEDF1;  /* Fondo general */
+    --color-tarjeta-fondo: white;  /* Fondo del contenedor central */
+    --color-principal: #FFB6C1;   /* Rosa claro para hover y acentos */
+    --color-secundario: #B37F9C;  /* Rosa malva para títulos y botón primario */
+    --color-texto-oscuro: #333333;
+    --color-texto-claro: #4c4c4c;
+    --color-borde-suave: #E0E0E0;
+    --color-sombra: rgba(0, 0, 0, 0.12);
+}
+
+/* ===================================================================
+   ESTILOS BASE Y CENTRADO
+   =================================================================== */
+body {
+    background-color: var(--color-fondo-suave);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto-oscuro);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrado vertical para formularios cortos */
+    min-height: 100vh;
+}
+
+/* Contenedor central (Replicando la tarjeta de la imagen) */
+.auth-container {
+    width: 90%;
+    max-width: 500px; /* Hacemos la tarjeta un poco más ancha que login/register */
+    padding: 40px;
+    background-color: var(--color-tarjeta-fondo);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px var(--color-sombra);
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: var(--color-secundario);
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    text-align: center;; /* Alineamos el título a la izquierda */
+}
+
+/* ===================================================================
+   ESTILOS DEL FORMULARIO COMPACTO
+   =================================================================== */
+
+/* Contenedor de cada par label-input/textarea */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px; /* Reducimos el espacio entre filas */
+    padding-bottom: 5px; /* Separación extra */
+    border-bottom: 1px dashed var(--color-borde-suave); /* Separador suave */
+}
+
+/* Etiquetas: Fijas, alineadas a la derecha */
+.form-group label {
+    font-weight: 600; /* Un poco más grueso */
+    color: var(--color-texto-claro);
+    width: 30%; /* Espacio fijo para la etiqueta */
+    text-align: right;
+    padding-right: 15px;
+}
+
+/* Campos de Entrada y Textarea */
+.auth-container input[type="text"],
+.auth-container textarea {
+    width: 70%; /* Ocupa el espacio restante */
+    padding: 8px;
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    font-family: inherit;
+    background-color: #fcfcfc; /* Fondo ligeramente diferente al de la tarjeta */
+}
+
+.auth-container textarea {
+    resize: vertical;
+    min-height: 100px; /* Altura mínima para el comentario */
+}
+
+.auth-container input:focus,
+.auth-container textarea:focus {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 2px rgba(255, 182, 193, 0.4); /* Sombra suave de enfoque */
+    outline: none;
+}
+
+
+/* ===================================================================
+   ESTILOS DE BOTONES
+   =================================================================== */
+
+/* Botón de Publicar Post (El botón "Submit-btn" de la imagen) */
+.submit-btn {
+    /* Alineado a la derecha como en la imagen */
+    float: right;
+    width: 150px; /* Ancho fijo para que no sea tan largo */
+    background-color: var(--color-principal); /* Usamos el rosa claro */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 25px;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-secundario); /* Rosa malva al pasar el ratón */
+}
+
+/* Botón "Volver al Blog" (usando la clase .btn) */
+.btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--color-borde-suave);
+    color: var(--color-texto-claro);
+    background-color: #ffffff;
+    display: inline-block; /* Para aplicar el padding */
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: var(--color-fondo-suave);
+    color: var(--color-texto-oscuro);
+    border-color: var(--color-principal);
+}

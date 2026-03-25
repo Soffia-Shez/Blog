@@ -1,0 +1,108 @@
+/* Colores basados en la paleta 'Rosa Suave' */
+:root {
+    --color-fondo-suave: #FFEDF1; /* Rosa muy pálido, casi blanco */
+    --color-principal: #FFB6C1;  /* Rosa claro para botones */
+    --color-secundario: #B37F9C; /* Rosa malva para acentos (títulos, bordes) */
+    --color-texto-oscuro: #333333;
+    --color-texto-claro: #4c4c4c;
+    --color-borde-suave: #E0E0E0;
+}
+
+body {
+    background-color: var(--color-fondo-suave);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto-oscuro);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.blog {
+    width: 90%;
+    max-width: 1000px;
+    padding: 30px 0;
+}
+
+/* --- Estilos de Navegación y Botones (General) --- */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--color-principal);
+    color: var(--color-texto-oscuro);
+    background-color: #ffffff;
+}
+
+.btn:hover {
+    background-color: var(--color-principal);
+    color: white;
+    border-color: var(--color-secundario);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos de las Publicaciones del Blog --- */
+
+.post {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    border-left: 5px solid var(--color-principal); /* Acento suave */
+}
+
+.post h2 {
+    color: var(--color-secundario);
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+.post p {
+    color: var(--color-texto-claro);
+    line-height: 1.6;
+}
+
+.author-info {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* Estilo específico del botón Borrar */
+.delete-btn {
+    background-color: #FFB6C1; /* Tono más fuerte */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    float: right; /* Para alinearlo a la derecha */
+}
+
+.delete-btn:hover {
+    background-color: #B37F9C; /* Tono malva más oscuro */
+}
+
+/* Estilo de las imágenes en el blog */
+.blog img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

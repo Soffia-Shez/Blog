@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Películas</title>
+    <link rel = 'stylesheet' href="/static/estilo_pelicula.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        {% for item in items %}
+            <div class='items'>
+                <a><h2> {{ item.title }} </h2></a>
+                <p>{{ item.contenido }}</p>
+
+            </div>
+
+        {% endfor %}
+
+        <img src="/static/b.jpeg" width="750" height="350">
+        <img src="/static/machine.jpg" width="750" height="350">
+
+        <div class="navigation-buttons">
+
+                <a href="{{url_for ('add')}}" class = "btn">Nueva publicación</a><br>
+                <a href="{{url_for ('logout')}}" class = "btn">Cerrar sesión</a><br>
+                <a href="{{url_for ('blog')}}" class = "btn">Volver</a><br>
+
+       </div>
+
+
+    </div>
+
+
+</body>
+</html>
